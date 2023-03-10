@@ -7,15 +7,24 @@ This is a short and sweet demo of parsing markdown with Pandoc and turning it in
 - `xelatex` 
 - `pandoc`
 
-## How-To
+## Setup
 
-To turn markdown into MLA format, just run `pandoc pdf --pdf-engine=xelatex` in the directory with your Markdown file (or specify a path to a specific markdown file if you need to).
-- See `example.md` to an example file. You can run `pandoc pdf --pdf-engine=xelatex` to get an MLA-formatted PDF.
+1. Copy `mla.sty` into `/usr/share/texmf/tex/latex`
+  - If you don't want to do this, then you'll have to keep `mla.sty` in the same directory you run the Pandoc command or hardcode the path into your markdown file.
 
-If you type your markdown in Neovim, you can use the [vim-pandoc plugin](https://github.com/vim-pandoc/vim-pandoc) and do `:Pandoc pdf --pdf-engine=xelatex` from inside Vim, you could even bind it to a key or something.
+## Usage
 
-> **Remember**: Be sure Pandoc can access `mla.sty` when you run it! You may want to consider hardcoding a path to it with a command-line argument.
+1. Run `pandoc pdf --pdf-engine=xelatex` in the directory with your markdown file
+  - Alternatively, you could specify a path to the markdown file with the `-i <PATH>` argument and run the command anywhere.
+  
+## Example
 
-If you really care about your experience being seamless (because wrapping your markdown in-between two lines of LaTeX and having 4 lines of YAML config at the top of you file ruins your minimalism) you can have Pandoc take your raw markdown and put it into a template before processing it.
+See `example.md` to an example file. You can run `pandoc pdf --pdf-engine=xelatex` to get an MLA-formatted PDF.
 
-Additionally, since this is using real LaTeX, we can even import our own MLA-friendly bibliography solutions if we want!
+## Additional Notes
+
+If you type your markdown in Neovim, you can use the [vim-pandoc plugin](https://github.com/vim-pandoc/vim-pandoc) and do `:Pandoc pdf --pdf-engine=xelatex` from inside Vim. You could even bind it to a key or something.
+
+If you really care about your experience being seamless (because wrapping your markdown in-between two lines of LaTeX and having 4 lines of YAML config at the top of you file ruins your minimalist experience; and/or the LaTeX is screwing with your smart indent) you can have Pandoc take your raw markdown and put it into a template before processing it. I leave this as an exercise to the reader (or future me, who will then update this repo).
+
+Additionally, since this is real LaTeX and not KaTeX or something, we can use LaTeX without doing any `$$` shenanigans and import our own packages! (e.g. a package for MLA-formatted bibliographies)
