@@ -36,7 +36,7 @@ For more in-depth instructions (along with a faster Neovim workflow), see [Setup
 1. Run `pandoc "<INPUT_FILE>" --pdf-engine=xelatex -o "<OUTPUT_FILE>"`
     - Be sure to include the .pdf file extension in `<OUTPUT_FILE>` *or* add `-w "pdf"`; otherwise Pandoc will default to exporting HTML
 
-*Example Use: `pandoc "example.pdf" --pdf-engine=xelatex -o "example.pdf"`*
+*Example Use: `pandoc "example.md" --pdf-engine=xelatex -o "example.pdf"`*
 
 ## Neovim
 
