@@ -25,7 +25,8 @@ pdf-engine: xelatex
 Hello World!
 \end{mla}
 ```
-3. Convert to MLA-formatted PDF with `pandoc "<INPUT_FILE>" --pdf-engine=xelatex -o "<OUTPUT_FILE>"`.
+3. Do `:Pandoc pdf` in Neovim (see: [vim-pandoc plugin](https://github.com/vim-pandoc/vim-pandoc))
+4. Done!
 
 For more in-depth instructions (along with a faster Neovim workflow), see [Setup](#setup) and [Usage](#usage).
 
