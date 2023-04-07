@@ -42,6 +42,7 @@ For more in-depth instructions (along with a faster Neovim workflow), see [Setup
 ## Neovim
 
 **Setup:** Install the [vim-pandoc plugin](https://github.com/vim-pandoc/vim-pandoc)
+- Side-Note: This plugin requires `pynvim` to be installed (Gentoo Package: `dev-python/pynvim`). You probably already have it, but it isn't working, this may be the culprit!
 
 1. Run `:Pandoc pdf` from inside Vim.
 
